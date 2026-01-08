@@ -1,18 +1,32 @@
-## Getting Started
+# Atividade 3 - App "Lista de Tarefas" 📝
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+Este projeto consiste no desenvolvimento de um programa de Lista de Tarefas em Java. O objetivo é permitir que o usuário gerencie suas atividades.
 
-## Folder Structure
+## 🚀 Funcionalidades
 
-The workspace contains two folders by default, where:
+O programa implementa as seguintes operações:
+* **Adicionar Tarefa:** O usuário pode cadastrar uma tarefa contendo nome, descrição e status.
+* **Listar Tarefas:** O programa exibe todas as tarefas e seus respectivos status.
+* **Remover Tarefa:** Permite selecionar uma tarefa específica para exclusão da lista.
+* **Alterar Status:** O usuário pode escolher uma tarefa e atualizar seu status.
+  * **Status suportados:** Disponível, Fazendo e Feita.
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+## 🏗️ Padrões de Projeto Utilizados
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+Foram aplicados dois padrões de projeto:
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
+### 1. Singleton
+* **Onde:** Aplicado na classe `TarefaRepository`.
+* **Como:** Garante uma única instância do repositório para centralizar o armazenamento e a manipulação dos dados da lista.
 
-## Dependency Management
+### 2. Strategy
+* **Onde:** 
+* **Como:** 
 
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+## 👥 Colaboradores
+O projeto foi desenvolvido por:
+* Gabriel Cândido Pereira Marinho ([gabrielmarinho1](https://github.com/gabrielmarinho1))
+* Juan Carlos Leite da Silva ([Juanzito2017](https://github.com/Juanzito2017))
+
+---
+*Trabalho apresentado para a disciplina de Engenharia de Software da UFMA 2025.2.*
