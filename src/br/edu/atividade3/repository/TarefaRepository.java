@@ -1,7 +1,9 @@
-package br.edu.atividade3.model;
+package br.edu.atividade3.repository;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import br.edu.atividade3.model.Tarefa;
 
 public class TarefaRepository {
 

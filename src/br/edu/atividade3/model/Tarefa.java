@@ -5,10 +5,11 @@ public class Tarefa {
     private String descricao;
     private Status status;
 
+    //método construtor
     public Tarefa(String nome, String descricao) {
         this.nome = nome;
         this.descricao = descricao;
-        this.status = Status.DISPONIVEL;
+        this.status = Status.DISPONIVEL; //esse atributo sempre inicializará com o Status disponível
     }
 
     public String getNome() {
