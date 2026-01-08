@@ -12,4 +12,28 @@ public class TarefaRepository {
     private TarefaRepository(){
         tarefas = new ArrayList<>();
     }
+
+    /*cria lista se nao existir e retorna se ja existir*/
+
+    public static synchronized TarefaRepository getInstance(){
+        if(instance == null){
+            instance = new TarefaRepository();
+        }
+        return instance;
+    }
+
+    /* cria tarefa*/
+    public void adicionar(Tarefa t){
+        tarefas.add(t);
+    }
+
+    /*remove tarefa pelo index */
+    public void remover(int index){
+        tarefas.remove(index);
+    }
+
+    /*retorna lista atualizada */
+    public List<Tarefa> listar(){
+        return tarefas;
+    }
 }
