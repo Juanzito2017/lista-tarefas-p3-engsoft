@@ -20,8 +20,8 @@ Foram aplicados dois padrões de projeto:
 * **Como:** Garante uma única instância do repositório para centralizar o armazenamento e a manipulação dos dados da lista.
 
 ### 2. Strategy
-* **Onde:** 
-* **Como:** 
+* **Onde:**  Na interface `ExibicaoStrategy`.
+* **Como:** Implementa estratégias concretas para exibir a lista trocando o comportamento de exibição ao atribuir uma nova implementação quando desejado. As implementações criadas foram `ExibicaoSimples` e `ExibicaoPorStatus`.
 
 ## 👥 Colaboradores
 O projeto foi desenvolvido por:
