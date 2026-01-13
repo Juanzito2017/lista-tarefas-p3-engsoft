@@ -17,7 +17,7 @@ public class ExibicaoPorStatus implements ExibicaoStrategy {
             boolean temTarefa = false;
             for (int i = 0; i < tarefas.size(); i++) {
                 if (tarefas.get(i).getStatus() == s) {
-                    System.out.println(i + " - " + tarefas.get(i).getNome());
+                    System.out.println(i + " - " + tarefas.get(i).getNome() + " - " + tarefas.get(i).getDescricao());
                     temTarefa = true;
                 }
             }

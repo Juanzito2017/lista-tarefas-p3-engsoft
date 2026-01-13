@@ -18,7 +18,8 @@ public class Main {
                 System.out.println("2. Listar Tarefas");
                 System.out.println("3. Remover Tarefa");
                 System.out.println("4. Alterar Status");
-                System.out.println("5. Sair");
+                System.out.println("5. Alterar Modo de Exibição"); /* Nova funcionalidade */
+                System.out.println("6. Sair");
                 System.out.print("Escolha: ");
                 
                 /*tratamento de entrada vazia */
@@ -37,15 +38,15 @@ public class Main {
                         case 1 -> {
                             /*controle de erro */
                             String nome;
-                           do {
+                            do {
                                 System.out.print("Nome: ");
                                 nome = sc.nextLine().trim();
                                 if (nome.isEmpty()){
                                     System.out.println("Erro: Nome da tarefa não pode ser vazio.");
                                 }
-                           } while (nome.isEmpty());
+                            } while (nome.isEmpty());
 
-                           /*descricao pode ser vazia */
+                            /*descricao pode ser vazia */
                             System.out.print("Descrição: ");
                             String desc = sc.nextLine();
                             repo.adicionar(new Tarefa(nome, desc));
@@ -64,7 +65,6 @@ public class Main {
                                     sc.nextLine();
                                 }
                             }
-    
                         }
                         case 4 -> {
                             System.out.print("Índice da tarefa: ");
@@ -86,16 +86,31 @@ public class Main {
                                         System.out.println("Erro: Entrada inválida.");
                                         sc.nextLine();
                                     }
-                            } else {
-                                System.out.println("Erro. Tarefa não encontrada.");
-                                sc.nextLine();
-                            }
-                        } else {
-                                System.out.println("Erro: Índice inválido.");
-                                sc.nextLine();
+                                } else {
+                                    System.out.println("Erro. Tarefa não encontrada.");
+                                    sc.nextLine();
+                                }
                             }
                         }
                         case 5 -> {
+                            /* Alternância entre as estratégias do padrão Strategy */
+                            System.out.println("Escolha o modo de exibição:");
+                            System.out.println("1 - Simples (Lista completa)");
+                            System.out.println("2 - Agrupado (Por Status)");
+                            if (sc.hasNextInt()) {
+                                int modo = sc.nextInt();
+                                if (modo == 1) {
+                                    exibicao = new ExibicaoSimples();
+                                    System.out.println("Modo Simples ativado.");
+                                } else if (modo == 2) {
+                                    exibicao = new ExibicaoPorStatus();
+                                    System.out.println("Modo Agrupado ativado.");
+                                } else {
+                                    System.out.println("Opção inválida.");
+                                }
+                            }
+                        }
+                        case 6 -> {
                             System.out.println("Saindo...");
                             return;
                         }
