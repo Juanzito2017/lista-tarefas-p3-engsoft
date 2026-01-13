@@ -11,5 +11,20 @@ public class ExibicaoPorStatus implements ExibicaoStrategy {
             System.out.println("Nenhuma tarefa para exibir.");
             return;
         }
+
+        for (Status s : Status.values()) {
+            System.out.println("\n--- STATUS: " + s + " ---");
+            boolean temTarefa = false;
+            for (int i = 0; i < tarefas.size(); i++) {
+                if (tarefas.get(i).getStatus() == s) {
+                    System.out.println(i + " - " + tarefas.get(i).getNome());
+                    temTarefa = true;
+                }
+            }
+            if (!temTarefa) {
+                System.out.println("(Vazio)");
+            } 
+                
+        }
     }
 }

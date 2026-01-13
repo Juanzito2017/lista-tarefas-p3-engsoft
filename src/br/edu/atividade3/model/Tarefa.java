@@ -38,7 +38,7 @@ public class Tarefa {
 
     @Override
     public String toString() {
-        return String.format("[%s] %s %s", status, nome, descricao);
+        return String.format("[%s] %s - %s", status, nome, descricao);
     }
 
 
